@@ -1,8 +1,8 @@
 ### How to Start Building Your Version of Memset
 
-After forking, please refer to the **TailwindCSS Executable** part of of the **Code Source Structure**. After installing the executable. All the files you need should be ready.
+After forking, please refer to the **TailwindCSS Executable** part of of the **Code Source Structure**. After installing the executable and running the command, all the files you need should be ready.
 
-You can immediately open each `.html` files and it will display normally as it would on a regular website.
+You can directly open each `.html` files on your browser and it will display normally as it would on a regular website.
 
 For the instructions to manage the data in your page, please refer to the `/about` section of your site.
 
@@ -11,7 +11,7 @@ For the instructions to manage the data in your page, please refer to the `/abou
 #### TailwindCSS Executable
 Please follow the instructions mentioned in [https://tailwindcss.com/blog/standalone-cli](https://tailwindcss.com/blog/standalone-cli). While working on the page, you may run the command
 
-Please put the executable at the root of the project. I excluded it from the github repository as you can download it directly yourself (much like node_modules).
+Please put the executable at the root of the project. I excluded it from the github repository as you can download it directly yourself (much like node_modules). 
 
 
 ```
