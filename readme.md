@@ -13,14 +13,12 @@ Please put the executable at the root of the project. I excluded it from the git
 to let tailwindcss generate the .css files needed for your styles. If you make changes to the name or the path of the .
 css file, please adjust accordingly.
 
-\\
 
 There is also a `tailwind.config.js` file if you need to configure tailwindcss' behaviour.
 
 #### `.html` Files
 You can put your .html files based on the root of the github pages directory, to put it into subpages, you can add a folder and insert the .html files there
 
-\\
 
 `template.html` is for you to copy and create new pages quickly.
 
