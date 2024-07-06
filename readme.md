@@ -1,3 +1,11 @@
+### How to Start Building Your Version of Memset
+
+After forking, please refer to the **TailwindCSS Executable** part of of the **Code Source Structure**. After installing the executable. All the files you need should be ready.
+
+You can immediately open each `.html` files and it will display normally as it would on a regular website.
+
+For the instructions to manage the data in your page, please refer to the `/about` section of your site.
+
 ### Code Source Structure
 
 #### TailwindCSS Executable
@@ -22,5 +30,5 @@ You can put your .html files based on the root of the github pages directory, to
 
 `template.html` is for you to copy and create new pages quickly.
 
-#### `.css` files
+#### `.css` Files
 You can put your .css files based on how you would like to access it from the .html files. By default, I linked it to `./out.css` in the root directory
