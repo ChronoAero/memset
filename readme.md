@@ -15,10 +15,10 @@ Please put the executable at the root of the project. I excluded it from the git
 
 
 ```
-./tailwindcss -i index.css -o out.css
+./tailwindcss -i index.css -o out.css --watch
 ```
 
-to let tailwindcss generate the .css files needed for your styles. If you make changes to the name or the path of the .
+to let tailwindcss generate the .css files needed for your styles (and watch for changes while you work). If you make changes to the name or the path of the .
 css file, please adjust accordingly.
 
 
