@@ -1,0 +1,3 @@
+<div>
+    <p><span x-text="courseName"></span>'s Page</p>
+</div>

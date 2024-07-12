@@ -1,0 +1,21 @@
+{
+    "id" : 12611,
+    "problems": [
+        {
+            "prompt": "Is it possible to make any combinational logic circuit with AND and NOT gates only?",
+            "imgUrl": "NONE",
+            "codeBlock": "",
+            "shortAns": "Yes",
+            "solution": "???",
+            "qid": 1
+        },
+        {
+            "prompt": "Is it possible to make any combinational logic circuit with NOR gates only? $$\\oint_1^6$$",
+            "imgUrl": "NONE",
+            "codeBlock": "",
+            "shortAns": "Yes", 
+            "solution": "???",
+            "qid": 2
+        }
+    ]
+}

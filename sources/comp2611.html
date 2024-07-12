@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMP2611 Page</title>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <link rel="stylesheet" href="/out.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+
+</head>
+<body x-data="{
+    courseName: 'COMP2611',
+    saveFile: {},
+}" x-init="async () => {saveFile = await(await fetch('/sources/comp2611.json')).json(); MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']]
+    }
+});}">
+    <div>
+        <p><span x-text="courseName"></span>'s Page</p>
+    </div>
+    <br/>
+    <template x-for="p in saveFile.problems">
+        <div>
+            <span x-text="p.prompt"></span>
+        </div>
+    </template>
+    <form x-data="{
+        tempPrompt: '',
+        tempAns: '',
+        tempImgLink: '',
+        tempCodeBlock: '',
+        colored: 'no'
+    }" @submit.prevent="() => {console.log('assume update form, modify the temporary json file')}">
+        <div>Preview</div>
+        <div>
+            <p x-text="tempPrompt"></p>
+            <p x-text="tempAns"></p>
+            <pre><code x-text="tempCodeBlock" :data-highlighted="colored"></code></pre>
+        </div>
+        <label>Prompt:</label>
+        <input type="textarea" x-model="tempPrompt" @change=" () => {MathJax.Hub.Queue(['Typeset',MathJax.Hub]);}"/>
+        <label>Ans:</label>
+        <input type="text" x-model="tempAns" @change=" () => {MathJax.Hub.Queue(['Typeset',MathJax.Hub]);}"/>
+        <label>Img Link:</label>
+        <input type="text" x-model="tempImgLink"/>
+        <label>Img Link:</label>
+        <input type="text" x-model="tempCodeBlock" @change = "() => {colored='no'; hljs.highlightAll(); console.log('recolor')}"/>
+        <br/>
+        <input type="submit"/>
+    </form>
+    <div>Download the new json file here</div>
+    <!-- <div x-html="await (await fetch('template.txt')).text()"></div> -->
+</body>
+</html>
